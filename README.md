@@ -14,7 +14,9 @@ Since publicly available tax lien redemption datasets are limited, I used the **
 - **Dataset used:** Home Credit Default Risk
 - **File used in this module:** `application_train.zip` / `application_train.csv`
 - **Source:** Kaggle Home Credit Default Risk competition - https://www.kaggle.com/c/home-credit-default-risk
-The dataset contains borrower information such as income, loan amount, credit history, and demographic characteristics.
+- The dataset contains borrower information such as income, loan amount, credit history, and demographic characteristics.
+- In this repository the dataset is stored in a compressed **7z archive** (`application_train.7z`).
+- To reduce repository size and improve download speed, the dataset will need to be extracted before loading the CSV file into pandas.
 
 ## Methodology Update
 Compared with the earlier project concept, this module uses a **proxy repayment dataset** rather than true county tax lien redemption data. I made this change because:
