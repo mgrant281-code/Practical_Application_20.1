@@ -83,13 +83,13 @@ I chose ROC-AUC because:
 
 ## Initial Results
 This initial EDA and baseline modeling output showed:
-**- ROC-AUC: 0.6678
-**- PR-AUC: 0.1519
-**- Positive-class rate: 8.07%
+**- ROC-AUC: 0.6678**
+**- PR-AUC: 0.1519**
+**- Positive-class rate: 8.07%**
 
 My evaluation is that 0.6678 is modest, not poor, but not strong. It is clearly better than random guessing at 0.50, so the model is learning signal, but it is not yet competitive for a high-quality credit-risk style classifier. On an imbalanced problem like this one, the PR-AUC of 0.1519 matters a lot too; since the baseline event rate is 0.0807, the model is doing better than random ranking, but only by about 1.9× on precision-recall.
 
-The executed notebook produced a ROC-AUC of 0.6678, which indicates **the model learned a meaningful signal but still has substantial room for improvement.** The main limitation is likely feature exclusion, especially the omission of the EXT_SOURCE_* and EXT_SOURCE_MEAN variables, which are known to be highly informative in this dataset.
+The ROC-AUC score of 0.6678 indicates **the model learned a meaningful signal but still has substantial room for improvement.** The main limitation is likely feature exclusion, especially the omission of the EXT_SOURCE_* and EXT_SOURCE_MEAN variables, which are known to be highly informative in this dataset.
 
 To improve the ROC-AUC results, my plan for the next iteration to ensure the scores are actually reliable (and not due to chance), I will retain the omitted variables and use a proper imputation strategy to handle the missing values.
 
